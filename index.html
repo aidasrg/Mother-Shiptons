@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mother Shipton’s Cave & Petrifying Well – Visitor Guide</title>
+  <style>
+    :root {
+      --bg: #fdfbf7;
+      --card-bg: #ffffff;
+      --text-main: #2b2621;
+      --text-muted: #6b635b;
+      --primary: #1f3d2b;
+      --accent: #8b5e34;
+      --border: #e6dfd5;
+      --highlight: #f4eee1;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text-main);
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #162c1f 0%, #2b4c38 100%);
+      color: #fff;
+      padding: 2.5rem 1.25rem 2rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.18);
+      color: #f7eedc;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      font-family: Georgia, serif;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.35rem;
+      color: #ffffff;
+    }
+    .subtitle {
+      font-size: 1rem;
+      color: #dfd8cc;
+      max-width: 580px;
+      margin: 0 auto 1.5rem;
+    }
+    .quick-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-primary {
+      background-color: #d89e5a;
+      color: #1a150e;
+    }
+    .btn-primary:hover {
+      background-color: #c88d49;
+    }
+    .btn-outline {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .btn-outline:hover {
+      background-color: rgba(255, 255, 255, 0.22);
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      z-index: 100;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    nav a:hover, nav a:active {
+      color: var(--primary);
+      background-color: var(--highlight);
+    }
+    main {
+      max-width: 760px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.65rem;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background-color: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin: 0;
+    }
+    p {
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+      font-size: 0.96rem;
+    }
+    ul {
+      margin: 0 0 0.85rem 1.25rem;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    .alert-box {
+      background-color: #fff8e8;
+      border-left: 4px solid #e0922f;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      color: #5c3b0f;
+      margin-top: 0.75rem;
+    }
+    .badge-tag {
+      background: var(--highlight);
+      color: var(--accent);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      background-color: #f7f4ee;
+    }
+    @media print {
+      header { background: #fff; color: #000; padding: 1rem 0; }
+      h1 { color: #000; }
+      nav, .quick-actions { display: none !important; }
+      .card { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="badge">England’s Oldest Tourist Attraction • Open Since 1630</span>
+    <h1>Mother Shipton’s Cave & Petrifying Well</h1>
+    <p class="subtitle">Your handy one-page walking companion along the River Nidd in Knaresborough.</p>
+    <div class="quick-actions">
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
+      <button class="btn btn-outline" id="readBtn" onclick="toggleReadAloud()">🔊 Listen to Guide</button>
+    </div>
+  </header>
+
+  <nav aria-label="Page navigation">
+    <a href="#well">1. Petrifying Well</a>
+    <a href="#cave">2. The Cave</a>
+    <a href="#walk">3. Long Walk</a>
+    <a href="#sights">4. River Sights</a>
+    <a href="#tips">5. Tips</a>
+  </nav>
+
+  <main>
+    <!-- Section 1 -->
+    <section class="card" id="well">
+      <div class="card-header">
+        <span class="step-num">1</span>
+        <h2>The Petrifying Well & Underground Lake</h2>
+      </div>
+      <p><strong>The Stone-Making Water:</strong> The water emerges from a natural lake about a mile deep underground. As it travels through porous rock aquifers, it becomes saturated with stone-forming minerals.</p>
+      <ul>
+        <li><strong>Petrification Speed:</strong> Light porous objects (such as teddy bears) turn into hard rock within <strong>3 to 5 months</strong>. Dense or non-porous items take 12 to 24 months.</li>
+        <li><strong>Look Up at the Wall:</strong> Spot the famous Victorian gentleman's top-hat and lady's bonnet, hung on the rock face in <strong>1853</strong> on the way to York races and now completely petrified.</li>
+      </ul>
+      <div class="alert-box">
+        ⚠️ <strong>Visitor Notice:</strong> Due to extremely high mineral concentration, please do <strong>not</strong> drink the water!
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="card" id="cave">
+      <div class="card-header">
+        <span class="step-num">2</span>
+        <h2>Mother Shipton’s Cave & Her Story</h2>
+      </div>
+      <p><strong>Ursula Sontheil (Mother Shipton):</strong> Born during a violent thunderstorm in 1488 inside this exact riverside cave to her fifteen-year-old mother, Agatha.</p>
+      <ul>
+        <li><strong>Wisdom & Healing:</strong> Growing up by the River Nidd, Ursula developed deep knowledge of woodland herbs and flowers, making remedies for local folk.</li>
+        <li><strong>The Gift of Prophecy:</strong> Her reputation grew across England for accurately foretelling historical events, kings' fates, and local bridge collapses.</li>
+        <li><strong>Her Name:</strong> At age 24 she married York carpenter Tobias Shipton, taking the name Mother Shipton. She passed peacefully in 1561 at age 73.</li>
+      </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="card" id="walk">
+      <div class="card-header">
+        <span class="step-num">3</span>
+        <h2>Sir Henry Slingsby’s Long Walk</h2>
+      </div>
+      <p><strong>Royal Heritage:</strong> In 1630, King Charles I sold this parcel of the Royal Forest of Knaresborough to local gentleman Sir Charles Slingsby. His grandson, Sir Henry, landscaped these riverside pathways.</p>
+      <ul>
+        <li><strong>Ancient Trees:</strong> Look out for 300-year-old hornbeam, beech, and English oak trees that have stood here since the 17th century.</li>
+        <li><strong>Mother Shipton’s Moth:</strong> Keep an eye out in summer for this local woodland moth—its wing markings famously outline Mother Shipton's hooked nose and chin.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="card" id="sights">
+      <div class="card-header">
+        <span class="step-num">4</span>
+        <h2>Sights Across the River Nidd</h2>
+      </div>
+      <ul>
+        <li><strong>The Old Manor House (1208):</strong> Knaresborough's oldest building. King John built it around a living oak tree whose trunk remains inside a cupboard! In the garden stands a 400-year-old black mulberry tree planted under King James I.</li>
+        <li><strong>The World's End Pub & High Bridge:</strong> Named after Mother Shipton's foretelling: <em>"The world shall end when the High Bridge is thrice fallen."</em> (The bridge has fallen twice in history).</li>
+        <li><strong>The Railway Viaduct:</strong> Designed by Thomas Grainger. After collapsing in 1848, it was rebuilt and reopened on 1 October 1851, creating one of Yorkshire's most famous postcard views.</li>
+        <li><strong>Knaresborough Castle:</strong> The 1130 AD royal fortress sits high on the opposing cliff, dismantled in 1648 following the English Civil War.</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="card" id="tips">
+      <div class="card-header">
+        <span class="step-num">5</span>
+        <h2>Essential Visitor Information</h2>
+      </div>
+      <ul>
+        <li><strong>Location:</strong> High Bridge, Knaresborough, North Yorkshire, HG5 8DD.</li>
+        <li><strong>Pathways:</strong> The main river walk is flat, with stone steps leading to the Well terrace and Cave.</li>
+        <li><strong>Preservation:</strong> Your visit directly helps maintain this ancient Royal Forest and geological site for future generations. Please stay on paths and take litter home.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mother Shipton’s Cave & Petrifying Well • Established 1630 • Knaresborough, North Yorkshire</p>
+  </footer>
+
+  <script>
+    let synth = window.speechSynthesis;
+    let isSpeaking = false;
+
+    function toggleReadAloud() {
+      const btn = document.getElementById('readBtn');
+      if (!('speechSynthesis' in window)) {
+        alert("Text-to-speech is not supported on this browser.");
+        return;
+      }
+      if (isSpeaking) {
+        synth.cancel();
+        isSpeaking = false;
+        btn.innerHTML = "🔊 Listen to Guide";
+      } else {
+        const textToRead = document.querySelector('main').innerText;
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.rate = 0.95;
+        utterance.pitch = 1.0;
+        utterance.onend = () => {
+          isSpeaking = false;
+          btn.innerHTML = "🔊 Listen to Guide";
+        };
+        synth.speak(utterance);
+        isSpeaking = true;
+        btn.innerHTML = "⏹️ Stop Audio";
+      }
+    }
+  </script>
+</body>
+</html>
